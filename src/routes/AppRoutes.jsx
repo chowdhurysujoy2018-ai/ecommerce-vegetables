@@ -1,8 +1,12 @@
 import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+import About from '../pages/About'
 
 const AppRoutes = () => {
   return (
-    <div>AppRoutes</div>
+    <Routes>
+      <Route path="/" element={<About />} />
+    </Routes>
   )
 }
 
