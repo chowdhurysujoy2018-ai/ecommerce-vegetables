@@ -1,11 +1,15 @@
+import React from 'react'
 import './App.css'
+import Header from './global-components/Header'
+import Footer from './global-components/Footer'
+import AppRoutes from './routes/AppRoutes'
 
 function App() {
   return (
     <>
-      <h1 className="text-3xl font-bold underline">
-        Welcome to ecommerce vegetables store
-      </h1>
+      <Header />  
+      <AppRoutes />
+      <Footer />
     </>
   )
 }
