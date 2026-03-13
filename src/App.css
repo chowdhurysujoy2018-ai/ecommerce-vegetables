@@ -1,3 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap');
+
+:root{
+  --primary-color: #185c13;
+  --secondary-color: #f5f5f5;
+  --gray-light-600: #808080;
+  --black-color:#000000;
+  --white-color:#ffffff;
+  --red-color: #ff0000;
+}
+
+body {
+  font-family: 'Commissioner', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   max-width: 1500px;
   margin: 0 auto;
