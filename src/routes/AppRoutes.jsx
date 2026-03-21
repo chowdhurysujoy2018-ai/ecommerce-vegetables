@@ -9,6 +9,7 @@ import PrivacyPolicy from '../pages/PrivacyPolicy'
 import PaymentPolicy from '../pages/PaymentPolicy'
 import TermConditions from '../pages/TremConditions'
 import Shop from '../pages/Shop'
+import ProductListing from '../pages/ProductListing'
 import Blog from '../pages/Blog'
 import BlogDetails from '../pages/BlogDetails'
 
@@ -32,6 +33,7 @@ const AppRoutes = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/shop" element={<Shop />} />
+      <Route path="/product-lists" element={<ProductListing />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/:id" element={<BlogDetails />} />
 
