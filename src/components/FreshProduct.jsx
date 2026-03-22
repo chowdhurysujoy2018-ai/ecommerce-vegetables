@@ -17,10 +17,10 @@ const FreshProduct = () => {
   }
 
   return (
-    <section className='py-20'>
+    <section className='py-10'>
       <div className="container">
-        <GlobalHeader headerText="Fresh products" headDirec="text-center"/>
-        <div className="w-full px-6 py-10">
+        <GlobalHeader headerText="Fresh products" headDirec="text-center mb-15"/>
+        <div className="w-full">
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={20}
