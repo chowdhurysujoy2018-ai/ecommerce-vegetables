@@ -50,10 +50,10 @@ const Header = () => {
               <span className='border border-gray-200 rounded-full h-9 inline-flex items-center justify-center w-9 mr-2.5'><FontAwesomeIcon icon={faUser} /></span>Login
             </Link>
             <Link to="/cart" className='flex items-center'>
-              <span className='border border-gray-200 rounded-full h-9 inline-flex items-center justify-center w-9'><FontAwesomeIcon icon={faHeart} /></span><span className='inline-flex item-center justify-center h-6 w-6 bg-(--primary-color) rounded-full ml-[-4px] text-white'>0</span>
+              <span className='border border-gray-200 rounded-full h-9 inline-flex items-center justify-center w-9'><FontAwesomeIcon icon={faHeart} /></span><span className='inline-flex item-center justify-center h-6 w-6 bg-(--primary-color) rounded-full -ml-1 text-white'>0</span>
             </Link>
             <Link to="/cart" className='flex items-center'>
-              <span className='border border-gray-200 rounded-full h-9 inline-flex items-center justify-center w-9'><FontAwesomeIcon icon={faBagShopping} /></span><span className='inline-flex item-center justify-center h-6 w-6 bg-(--primary-color) rounded-full ml-[-4px] text-white'>0</span>
+              <span className='border border-gray-200 rounded-full h-9 inline-flex items-center justify-center w-9'><FontAwesomeIcon icon={faBagShopping} /></span><span className='inline-flex item-center justify-center h-6 w-6 bg-(--primary-color) rounded-full -ml-1 text-white'>0</span>
             </Link>
 
           </div>
