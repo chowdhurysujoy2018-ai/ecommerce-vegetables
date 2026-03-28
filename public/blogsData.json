@@ -1,0 +1,352 @@
+{
+  "Blogs": [
+    {
+      "id": 1,
+      "title": "Tomato – The Heart-Friendly Vegetable",
+      "slug": "tomato-benefits",
+      "image": "https://images.pexels.com/photos/9163281/pexels-photo-9163281.jpeg",
+      "shortDesc": "Rich in antioxidants, tomatoes support heart health and glowing skin.",
+      "category": "Health",
+      "author": "Admin",
+      "date": "2026-03-01",
+      "content": "Tomatoes are rich in lycopene, a powerful antioxidant.\n\nHealth Benefits:\n- Improves heart health\n- Protects against cancer\n- Enhances skin glow\n\nUsage:\nUsed in curries, salads, sauces, and juices."
+    },
+    {
+      "id": 2,
+      "title": "Potato – Energy Booster",
+      "slug": "potato-benefits",
+      "image": "https://images.pexels.com/photos/10899606/pexels-photo-10899606.jpeg",
+      "shortDesc": "A great source of carbohydrates for instant energy.",
+      "category": "Nutrition",
+      "author": "Admin",
+      "date": "2026-03-02",
+      "content": "Potatoes are a staple food worldwide.\n\nHealth Benefits:\n- Boosts energy\n- Rich in potassium\n- Supports digestion\n\nUsage:\nFries, curries, snacks."
+    },
+    {
+      "id": 3,
+      "title": "Carrot – Vision Booster",
+      "slug": "carrot-benefits",
+      "image": "https://images.pexels.com/photos/34936603/pexels-photo-34936603.jpeg",
+      "shortDesc": "Improves eyesight and boosts immunity.",
+      "category": "Health",
+      "author": "Admin",
+      "date": "2026-03-03",
+      "content": "Carrots contain beta-carotene.\n\nHealth Benefits:\n- Improves eyesight\n- Strengthens immunity\n- Good for skin\n\nUsage:\nSalads, juices, curries."
+    },
+    {
+      "id": 4,
+      "title": "Spinach – Iron Rich Superfood",
+      "slug": "spinach-benefits",
+      "image": "https://images.pexels.com/photos/16010614/pexels-photo-16010614.jpeg",
+      "shortDesc": "Loaded with iron and essential vitamins.",
+      "category": "Superfood",
+      "author": "Admin",
+      "date": "2026-03-04",
+      "content": "Spinach is highly nutritious.\n\nHealth Benefits:\n- Boosts hemoglobin\n- Improves bone health\n- Supports immunity\n\nUsage:\nCooked dishes, soups, smoothies."
+    },
+    {
+      "id": 5,
+      "title": "Broccoli – Cancer Fighter",
+      "slug": "broccoli-benefits",
+      "image": "https://images.pexels.com/photos/8538298/pexels-photo-8538298.jpeg",
+      "shortDesc": "Rich in compounds that reduce cancer risk.",
+      "category": "Health",
+      "author": "Admin",
+      "date": "2026-03-05",
+      "content": "Broccoli is a cruciferous vegetable.\n\nHealth Benefits:\n- Reduces cancer risk\n- Supports digestion\n- Detoxifies body\n\nUsage:\nSteamed, stir-fried, salads."
+    },
+    {
+      "id": 6,
+      "title": "Onion – Natural Immunity Booster",
+      "slug": "onion-benefits",
+      "image": "https://images.unsplash.com/photo-1508747703725-719777637510",
+      "shortDesc": "Onions help fight infections and boost immunity.",
+      "category": "Health",
+      "author": "Admin",
+      "date": "2026-03-06",
+      "content": "Onions contain antioxidants and sulfur compounds.\n\nHealth Benefits:\n- Boosts immunity\n- Controls blood sugar\n- Improves heart health"
+    },
+    {
+      "id": 7,
+      "title": "Garlic – Natural Antibiotic",
+      "slug": "garlic-benefits",
+      "image": "https://images.pexels.com/photos/29560968/pexels-photo-29560968.jpeg",
+      "shortDesc": "Garlic is known for its powerful medicinal properties.",
+      "category": "Health",
+      "author": "Admin",
+      "date": "2026-03-07",
+      "content": "Garlic has been used for centuries.\n\nHealth Benefits:\n- Fights infections\n- Lowers cholesterol\n- Boosts immunity"
+    },
+    {
+      "id": 8,
+      "title": "Cabbage – Gut Friendly Vegetable",
+      "slug": "cabbage-benefits",
+      "image": "https://images.pexels.com/photos/6316537/pexels-photo-6316537.jpeg",
+      "shortDesc": "Cabbage supports digestion and gut health.",
+      "category": "Health",
+      "author": "Admin",
+      "date": "2026-03-08",
+      "content": "Cabbage is rich in fiber.\n\nHealth Benefits:\n- Improves digestion\n- Good for gut health\n- Anti-inflammatory"
+    },
+    {
+      "id": 9,
+      "title": "Cauliflower – Low Carb Alternative",
+      "slug": "cauliflower-benefits",
+      "image": "https://images.pexels.com/photos/7456540/pexels-photo-7456540.jpeg",
+      "shortDesc": "A healthy low-carb substitute for many foods.",
+      "category": "Nutrition",
+      "author": "Admin",
+      "date": "2026-03-09",
+      "content": "Cauliflower is versatile and nutritious.\n\nHealth Benefits:\n- Supports weight loss\n- Rich in vitamins\n- Improves digestion"
+    },
+    {
+      "id": 10,
+      "title": "Brinjal (Eggplant) – Brain Health Booster",
+      "slug": "brinjal-benefits",
+      "image": "https://images.pexels.com/photos/33519030/pexels-photo-33519030.jpeg",
+      "shortDesc": "Supports brain function and heart health.",
+      "category": "Health",
+      "author": "Admin",
+      "date": "2026-03-10",
+      "content": "Brinjal contains antioxidants.\n\nHealth Benefits:\n- Improves brain function\n- Supports heart health\n- Rich in fiber"
+    },
+
+    {
+      "id": 11,
+      "title": "Capsicum – Vitamin C Powerhouse",
+      "slug": "capsicum-benefits",
+      "image": "https://images.pexels.com/photos/28352592/pexels-photo-28352592.jpeg",
+      "shortDesc": "Rich in Vitamin C and antioxidants.",
+      "category": "Nutrition",
+      "author": "Admin",
+      "date": "2026-03-11",
+      "content": "Capsicum is colorful and nutritious.\n\nHealth Benefits:\n- Boosts immunity\n- Improves skin\n- Supports eye health"
+    },
+    {
+      "id": 12,
+      "title": "Peas – Protein Rich Vegetable",
+      "slug": "peas-benefits",
+      "image": "https://images.pexels.com/photos/12044884/pexels-photo-12044884.jpeg",
+      "shortDesc": "Good source of plant protein.",
+      "category": "Nutrition",
+      "author": "Admin",
+      "date": "2026-03-12",
+      "content": "Peas are small but powerful.\n\nHealth Benefits:\n- High protein\n- Supports digestion\n- Boosts energy"
+    },
+
+    {
+      "id": 13,
+      "title": "Pumpkin – Immunity Booster",
+      "slug": "pumpkin-benefits",
+      "image": "https://images.pexels.com/photos/28745355/pexels-photo-28745355.jpeg",
+      "shortDesc": "Rich in vitamins and antioxidants.",
+      "category": "Health",
+      "author": "Admin",
+      "date": "2026-03-13",
+      "content": "Pumpkin is highly nutritious.\n\nHealth Benefits:\n- Boosts immunity\n- Good for eyes\n- Improves heart health"
+    },
+    {
+      "id": 14,
+      "title": "Radish – Detox Vegetable",
+      "slug": "radish-benefits",
+      "image": "https://images.pexels.com/photos/33653559/pexels-photo-33653559.jpeg",
+      "shortDesc": "Helps detoxify the body.",
+      "category": "Health",
+      "author": "Admin",
+      "date": "2026-03-14",
+      "content": "Radish cleanses the system.\n\nHealth Benefits:\n- Detoxifies body\n- Improves digestion\n- Hydrates body"
+    },
+
+    {
+      "id": 15,
+      "title": "Beetroot – Blood Purifier",
+      "slug": "beetroot-benefits",
+      "image": "https://images.pexels.com/photos/5668199/pexels-photo-5668199.jpeg",
+      "shortDesc": "Boosts hemoglobin and blood flow.",
+      "category": "Health",
+      "author": "Admin",
+      "date": "2026-03-15",
+      "content": "Beetroot improves blood circulation.\n\nHealth Benefits:\n- Purifies blood\n- Boosts stamina\n- Improves heart health"
+    },
+
+    {
+      "id": 16,
+      "title": "Cucumber – Hydration King",
+      "slug": "cucumber-benefits",
+      "image": "https://images.pexels.com/photos/5006635/pexels-photo-5006635.jpeg",
+      "shortDesc": "Keeps body hydrated and fresh.",
+      "category": "Health",
+      "author": "Admin",
+      "date": "2026-03-16",
+      "content": "Cucumber contains high water content.\n\nHealth Benefits:\n- Hydrates body\n- Good for skin\n- Supports digestion"
+    },
+
+    {
+      "id": 17,
+      "title": "Sweet Corn – Energy Snack",
+      "slug": "sweet-corn-benefits",
+      "image": "https://images.pexels.com/photos/34205950/pexels-photo-34205950.jpeg",
+      "shortDesc": "Tasty and energy-rich vegetable.",
+      "category": "Nutrition",
+      "author": "Admin",
+      "date": "2026-03-17",
+      "content": "Sweet corn is delicious and healthy.\n\nHealth Benefits:\n- Provides energy\n- Rich in fiber\n- Good for eyes"
+    },
+
+    {
+      "id": 18,
+      "title": "Bottle Gourd – Weight Loss Friendly",
+      "slug": "bottle-gourd-benefits",
+      "image": "https://images.pexels.com/photos/17274469/pexels-photo-17274469.jpeg",
+      "shortDesc": "Low calorie and ideal for dieting.",
+      "category": "Health",
+      "author": "Admin",
+      "date": "2026-03-18",
+      "content": "Bottle gourd is light and healthy.\n\nHealth Benefits:\n- Helps weight loss\n- Improves digestion\n- Good for heart"
+    },
+
+    {
+      "id": 19,
+      "title": "Bitter Gourd – Diabetes Control",
+      "slug": "bitter-gourd-benefits",
+      "image": "https://images.pexels.com/photos/28909474/pexels-photo-28909474.jpeg",
+      "shortDesc": "Helps control blood sugar levels.",
+      "category": "Health",
+      "author": "Admin",
+      "date": "2026-03-19",
+      "content": "Bitter gourd has medicinal properties.\n\nHealth Benefits:\n- Controls diabetes\n- Detoxifies blood\n- Boosts immunity"
+    },
+
+    {
+      "id": 20,
+      "title": "Lady Finger (Okra) – Digestive Support",
+      "slug": "okra-benefits",
+      "image": "https://images.pexels.com/photos/36621713/pexels-photo-36621713.jpeg",
+      "shortDesc": "Improves digestion and gut health.",
+      "category": "Health",
+      "author": "Admin",
+      "date": "2026-03-20",
+      "content": "Okra is rich in fiber.\n\nHealth Benefits:\n- Supports digestion\n- Good for diabetes\n- Improves skin"
+    },
+
+    {
+      "id": 21,
+      "title": "Mushroom – Protein Rich Superfood",
+      "slug": "mushroom-benefits",
+      "image": "https://images.pexels.com/photos/35169168/pexels-photo-35169168.jpeg",
+      "shortDesc": "Low calorie and high protein food.",
+      "category": "Superfood",
+      "author": "Admin",
+      "date": "2026-03-21",
+      "content": "Mushrooms are nutrient dense.\n\nHealth Benefits:\n- Boosts immunity\n- Rich in protein\n- Supports brain health"
+    },
+
+    {
+      "id": 22,
+      "title": "Turnip – Bone Strengthener",
+      "slug": "turnip-benefits",
+      "image": "https://images.pexels.com/photos/28857754/pexels-photo-28857754.jpeg",
+      "shortDesc": "Supports bone and joint health.",
+      "category": "Health",
+      "author": "Admin",
+      "date": "2026-03-22",
+      "content": "Turnips are rich in calcium.\n\nHealth Benefits:\n- Strengthens bones\n- Improves digestion\n- Boosts immunity"
+    },
+
+    {
+      "id": 23,
+      "title": "Zucchini – Low Calorie Vegetable",
+      "slug": "zucchini-benefits",
+      "image": "https://images.pexels.com/photos/9883451/pexels-photo-9883451.jpeg",
+      "shortDesc": "Great for weight loss diets.",
+      "category": "Nutrition",
+      "author": "Admin",
+      "date": "2026-03-23",
+      "content": "Zucchini is very healthy.\n\nHealth Benefits:\n- Low calorie\n- Good for heart\n- Improves digestion"
+    },
+
+    {
+      "id": 24,
+      "title": "Green Beans – Fiber Rich Food",
+      "slug": "green-beans-benefits",
+      "image": "https://images.pexels.com/photos/18358654/pexels-photo-18358654.jpeg",
+      "shortDesc": "Supports digestion and weight control.",
+      "category": "Nutrition",
+      "author": "Admin",
+      "date": "2026-03-24",
+      "content": "Green beans are nutritious.\n\nHealth Benefits:\n- Rich in fiber\n- Supports digestion\n- Good for heart"
+    },
+
+    {
+      "id": 25,
+      "title": "Drumstick – Calcium Booster",
+      "slug": "drumstick-benefits",
+      "image": "https://images.pexels.com/photos/11281331/pexels-photo-11281331.jpeg",
+      "shortDesc": "Great for bone strength and immunity.",
+      "category": "Health",
+      "author": "Admin",
+      "date": "2026-03-25",
+      "content": "Drumsticks are very nutritious.\n\nHealth Benefits:\n- Rich in calcium\n- Boosts immunity\n- Improves digestion"
+    },
+
+    {
+      "id": 26,
+      "title": "Fenugreek Leaves – Blood Sugar Control",
+      "slug": "fenugreek-benefits",
+      "image": "https://images.pexels.com/photos/10111991/pexels-photo-10111991.jpeg",
+      "shortDesc": "Helps control sugar levels.",
+      "category": "Health",
+      "author": "Admin",
+      "date": "2026-03-26",
+      "content": "Fenugreek leaves are medicinal.\n\nHealth Benefits:\n- Controls diabetes\n- Improves digestion\n- Boosts metabolism"
+    },
+
+    {
+      "id": 27,
+      "title": "Spring Onion – Flavor Booster",
+      "slug": "spring-onion-benefits",
+      "image": "https://images.pexels.com/photos/533342/pexels-photo-533342.jpeg",
+      "shortDesc": "Adds flavor and nutrition.",
+      "category": "Nutrition",
+      "author": "Admin",
+      "date": "2026-03-27",
+      "content": "Spring onions are tasty.\n\nHealth Benefits:\n- Boosts immunity\n- Good for digestion\n- Rich in vitamins"
+    },
+
+    {
+      "id": 28,
+      "title": "Ash Gourd – Cooling Vegetable",
+      "slug": "ash-gourd-benefits",
+      "image": "https://images.pexels.com/photos/10050245/pexels-photo-10050245.jpeg",
+      "shortDesc": "Helps cool the body.",
+      "category": "Health",
+      "author": "Admin",
+      "date": "2026-03-28",
+      "content": "Ash gourd is cooling in nature.\n\nHealth Benefits:\n- Reduces body heat\n- Improves digestion\n- Detoxifies body"
+    },
+
+    {
+      "id": 29,
+      "title": "Snake Gourd – Digestive Support",
+      "slug": "snake-gourd-benefits",
+      "image": "https://images.pexels.com/photos/32813824/pexels-photo-32813824.jpeg",
+      "shortDesc": "Supports digestion and hydration.",
+      "category": "Health",
+      "author": "Admin",
+      "date": "2026-03-29",
+      "content": "Snake gourd is healthy.\n\nHealth Benefits:\n- Improves digestion\n- Hydrates body\n- Low calorie"
+    },
+
+    {
+      "id": 30,
+      "title": "Ridge Gourd – Skin Friendly Vegetable",
+      "slug": "ridge-gourd-benefits",
+      "image": "https://images.pexels.com/photos/33236741/pexels-photo-33236741.jpeg",
+      "shortDesc": "Good for skin and digestion.",
+      "category": "Health",
+      "author": "Admin",
+      "date": "2026-03-30",
+      "content": "Ridge gourd is light and healthy.\n\nHealth Benefits:\n- Improves skin\n- Supports digestion\n- Detoxifies body"
+    }
+  ]
+}

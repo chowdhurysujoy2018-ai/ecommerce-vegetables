@@ -1,8 +1,11 @@
 import React from 'react'
+import InsideHeroBanner from '../components/InsideHeroBanner'
 
 const About = () => {
   return (
-    <div>About</div>
+    <>
+      <InsideHeroBanner />
+    </>
   )
 }
 

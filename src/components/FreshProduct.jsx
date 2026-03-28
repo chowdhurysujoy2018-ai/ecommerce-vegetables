@@ -27,8 +27,8 @@ const FreshProduct = () => {
             slidesPerView={4}
             navigation={false}
             pagination={true}
-            autoplay={{ delay: 2500 }}
-            loop={true}
+            autoplay={{ delay: 2500, disableOnInteraction: false }}
+            loop={false}
             breakpoints={{
               320: { slidesPerView: 1 },
               640: { slidesPerView: 2 },

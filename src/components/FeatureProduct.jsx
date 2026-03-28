@@ -20,15 +20,15 @@ const FeatureProduct = () => {
     <section className='py-20'>
       <div className="container">
         <GlobalHeader headerText="Feature products" headDirec="text-center"/>
-        <div className="w-full px-6 py-10">
+        <div className="w-full">
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={20}
             slidesPerView={4}
             navigation={false}
             pagination={true}
-            autoplay={{ delay: 2500 }}
-            loop={true}
+            autoplay={{ delay: 2500, disableOnInteraction: false }}
+            loop={false}
             breakpoints={{
               320: { slidesPerView: 1 },
               640: { slidesPerView: 2 },
