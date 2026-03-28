@@ -17,7 +17,6 @@ const CustomerReview = () => {
   return (
     <section className="py-20 bg-gray-50">
       <div className="container">
-        
         <GlobalHeader 
           headerText="Customer Review" 
           headDirec="text-center" 
@@ -86,7 +85,6 @@ const CustomerReview = () => {
             );
           })}
         </Swiper>
-
       </div>
     </section>
   );

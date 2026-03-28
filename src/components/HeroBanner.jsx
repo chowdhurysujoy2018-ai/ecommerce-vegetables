@@ -27,7 +27,7 @@ const HeroBanner = () => {
   ];
 
   return (
-    <section className="bg-[#f5f7f6] py-16 h-[750px] flex items-center bg-cover bg-center"
+    <section className="bg-[#f5f7f6] py-16 h-188 flex items-center bg-cover bg-center"
     style={{ backgroundImage: `url(${bannerWaterMark})` }}
     >
       <Swiper
