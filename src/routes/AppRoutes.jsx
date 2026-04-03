@@ -7,7 +7,7 @@ import Faqs from '../pages/Faqs'
 import ReturnPolicy from '../pages/ReturnPolicy'
 import PrivacyPolicy from '../pages/PrivacyPolicy'
 import PaymentPolicy from '../pages/PaymentPolicy'
-import TermConditions from '../pages/TremConditions'
+import TermConditions from '../pages/TermConditions'
 import Shop from '../pages/Shop'
 import ProductListing from '../pages/ProductListing'
 import Blog from '../pages/Blog'
@@ -44,7 +44,7 @@ const AppRoutes = () => {
       <Route path="/return-policy" element={<ReturnPolicy />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route path="/payment-policy" element={<PaymentPolicy />} />
-      <Route path="/term-conditions" element={<TermConditions />} />
+      <Route path="/terms-conditions" element={<TermConditions />} />
 
       {/* product pages */}
       <Route path="/cart" element={<Cart />} />

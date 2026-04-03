@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faUser, faHeart, faBagShopping, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 const Header = () => {
   return (
-    <section>
+    <section className='sticky top-0 bg-white z-10'>
       <div className="container flex items-center justify-between">
         <nav className='max-w-137.5 w-full'>
           <ul className='flex gap-x-10 font-semibold uppercase'>
