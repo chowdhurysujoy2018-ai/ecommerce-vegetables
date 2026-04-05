@@ -50,18 +50,16 @@ const Login = () => {
     } else {
       setErrors({});
 
-      // ✅ Local Storage Authentication
       const existingUsers = JSON.parse(localStorage.getItem('registeredUsers')) || [];
       const validUser = existingUsers.find(u => u.email === form.email && u.password === form.password);
 
-      // We will also accept the fallback test credentials just in case
       if (validUser || (form.email === "test@gmail.com" && form.password === "123456")) {
-        const userData = validUser 
-          ? { email: validUser.email, firstName: validUser.firstName } 
+        const userData = validUser
+          ? { email: validUser.email, firstName: validUser.firstName }
           : { email: form.email, firstName: "Test User" };
 
         login(userData);
-        navigate(from); // 🔁 redirect back
+        navigate(from, { replace: true }); // ✅ ONLY CHANGE HERE
       } else {
         setErrors({
           general: "Invalid email or password. Please register first if you haven't.",

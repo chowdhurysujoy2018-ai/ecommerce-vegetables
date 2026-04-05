@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react' // ✅ useState added
 import Button from '../global-components/Button'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
@@ -23,7 +23,8 @@ const ProductCard = ({
   const navigate = useNavigate();
   const location = useLocation();
 
-  // ✅ SAFE PRODUCT OBJECT (FIXED)
+  const [showLoginMsg, setShowLoginMsg] = useState(false); // ✅ toast state
+
   const product = {
     id: productId ?? productName,
     name: productName,
@@ -68,19 +69,27 @@ const ProductCard = ({
           </span>
         </div>
 
+        {/* ✅ LOGIN TOAST */}
+        {showLoginMsg && (
+          <div className="w-full mt-2 text-sm text-white bg-red-500 px-3 py-2 rounded-md text-center animate-pulse">
+            🔒 Please login first to add items to cart!
+          </div>
+        )}
+
         {/* BUTTON */}
         <Button
           btnText={btnText || "Add to Cart"}
           btnIcon={faShoppingBasket}
           btnClr="bg-[var(--primary-color)] text-white !mt-3"
-
           onClick={() => {
             if (!user || Object.keys(user).length === 0) {
-              alert("Please login first to add items to your cart.");
-              navigate('/login', { state: { from: location.pathname } });
+              setShowLoginMsg(true); // ✅ show toast
+              setTimeout(() => {
+                setShowLoginMsg(false);
+                navigate('/login', { state: { from: location.pathname } });
+              }, 1500); // ✅ wait 1.5s then redirect
               return;
             }
-            console.log("ADDING:", product); // ✅ DEBUG
             addToCart(product);
           }}
         />

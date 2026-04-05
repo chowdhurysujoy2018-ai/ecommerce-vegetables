@@ -59,8 +59,8 @@ const AppRoutes = () => {
         } 
       />
 
-      <Route path="/wishlist" element={<Wishlist />} />
-      <Route path="/checkout" element={<Checkout />} />
+      <Route path="/wishlist" element={<ProtectedRoute><Wishlist /></ProtectedRoute>} />
+      <Route path="/checkout" element={<ProtectedRoute><Checkout /></ProtectedRoute>} />
 
       {/* auth pages */}
       <Route path="/login" element={<Login />} />
