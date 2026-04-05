@@ -88,7 +88,7 @@ const Login = () => {
               name="email"
               value={form.email}
               onChange={handleChange}
-              className="w-full p-3 border bg-white rounded-md"
+              className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400"
             />
             {errors.email && (
               <p className="text-red-500 text-xs">{errors.email}</p>
@@ -102,7 +102,7 @@ const Login = () => {
               name="password"
               value={form.password}
               onChange={handleChange}
-              className="w-full p-3 border bg-white rounded-md"
+              className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400"
             />
             {errors.password && (
               <p className="text-red-500 text-xs">{errors.password}</p>
