@@ -5,6 +5,7 @@ import bannerWaterMark from "../assets/images/hero-banner-bg.jpg"
 
 import "swiper/css";
 import Button from "../global-components/Button";
+import { Link } from "react-router-dom";
 
 const HeroBanner = () => {
   const banners = [
@@ -44,9 +45,8 @@ const HeroBanner = () => {
                 <h1 className="text-4xl lg:text-7xl font-bold text-gray-800">
                   {item.title}
                 </h1>
-                <Button btnText={`${item.button}`} btnClr="bg-(--primary-color) text-white"/>
+                <Link to="/shop"><Button btnText={`${item.button}`} btnClr="bg-(--primary-color) text-white"/></Link>
               </div>
-
               {/* IMAGE */}
               <div className="relative animate-zoomIn">
                 <img

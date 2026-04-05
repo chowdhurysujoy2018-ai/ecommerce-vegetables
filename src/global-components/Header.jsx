@@ -3,9 +3,17 @@ import { Link } from 'react-router-dom'
 
 import logo from '../assets/images/logo.png'
 
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faUser, faHeart, faBagShopping, faChevronDown } from "@fortawesome/free-solid-svg-icons";
+
+import { useCart } from '../context/CartContext';
+
 const Header = () => {
+
+  const { cartItems } = useCart();
+  const totalItems = cartItems.reduce((total, item) => total + item.qty, 0);
+
   return (
     <section className='sticky top-0 bg-white z-10'>
       <div className="container flex items-center justify-between">
@@ -49,9 +57,22 @@ const Header = () => {
             <Link to="/login">
               <span className='border border-gray-200 rounded-full h-9 inline-flex items-center justify-center w-9 mr-2.5'><FontAwesomeIcon icon={faUser} /></span>Login
             </Link>
-            <Link to="/cart" className='flex items-center'>
+            {/* <Link to="/cart" className='flex items-center'>
               <span className='border border-gray-200 rounded-full h-9 inline-flex items-center justify-center w-9'><FontAwesomeIcon icon={faHeart} /></span><span className='inline-flex item-center justify-center h-6 w-6 bg-(--primary-color) rounded-full -ml-1 text-white'>0</span>
+            </Link> */}
+
+            <Link to="/cart" className='flex items-center relative'>
+              <span className='border border-gray-200 rounded-full h-9 w-9 inline-flex items-center justify-center'>
+                <FontAwesomeIcon icon={faBagShopping} />
+              </span>
+
+              {totalItems > 0 && (
+                <span className='absolute -top-1 -right-1 h-5 w-5 flex items-center justify-center bg-(--primary-color) rounded-full text-white text-xs'>
+                  {totalItems}
+                </span>
+              )}
             </Link>
+
             <Link to="/cart" className='flex items-center'>
               <span className='border border-gray-200 rounded-full h-9 inline-flex items-center justify-center w-9'><FontAwesomeIcon icon={faBagShopping} /></span><span className='inline-flex item-center justify-center h-6 w-6 bg-(--primary-color) rounded-full -ml-1 text-white'>0</span>
             </Link>

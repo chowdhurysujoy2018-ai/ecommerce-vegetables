@@ -51,7 +51,7 @@ const RecentBlog = () => {
                     </div>
                     <h4 className='font-bold text-[17px]'>{blog.shortDesc.slice(0, 40)}...</h4>
                     <p className='my-3.5 text-gray-500'>{blog.content.slice(0, 105)}...</p>
-                    <Link to="/" className='mt-auto block w-full uppercase underline text-(--primary-color) font-medium'>Read More</Link>
+                    <Link to={`/blog/${blog.id}`} className='mt-auto block w-full uppercase underline text-(--primary-color) font-medium'>Read More</Link>
                   </div>
                 </div>
               </SwiperSlide>
