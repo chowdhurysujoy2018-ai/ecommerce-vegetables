@@ -7,7 +7,7 @@ import useProducts from "../hooks/useProducts";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import ProductCard from "./productCard";
+import ProductCard from "./ProductCard";
 
 const FreshProduct = () => {
   const { products, loading } = useProducts();

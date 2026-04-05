@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 const Login = () => {
   const [form, setForm] = useState({
@@ -9,7 +10,12 @@ const Login = () => {
 
   const [errors, setErrors] = useState({});
 
-  // ✅ HANDLE INPUT
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { login } = useAuth();
+
+  const from = location.state?.from || "/";
+
   const handleChange = (e) => {
     setForm({
       ...form,
@@ -17,7 +23,6 @@ const Login = () => {
     });
   };
 
-  // ✅ VALIDATION
   const validate = () => {
     let newErrors = {};
 
@@ -36,7 +41,6 @@ const Login = () => {
     return newErrors;
   };
 
-  // ✅ SUBMIT
   const handleSubmit = (e) => {
     e.preventDefault();
     const validationErrors = validate();
@@ -45,81 +49,84 @@ const Login = () => {
       setErrors(validationErrors);
     } else {
       setErrors({});
-      console.log("Login Data:", form);
-      // 👉 API CALL HERE
+
+      // ✅ Local Storage Authentication
+      const existingUsers = JSON.parse(localStorage.getItem('registeredUsers')) || [];
+      const validUser = existingUsers.find(u => u.email === form.email && u.password === form.password);
+
+      // We will also accept the fallback test credentials just in case
+      if (validUser || (form.email === "test@gmail.com" && form.password === "123456")) {
+        const userData = validUser 
+          ? { email: validUser.email, firstName: validUser.firstName } 
+          : { email: form.email, firstName: "Test User" };
+
+        login(userData);
+        navigate(from); // 🔁 redirect back
+      } else {
+        setErrors({
+          general: "Invalid email or password. Please register first if you haven't.",
+        });
+      }
     }
   };
 
   return (
     <section className="py-20 flex items-center justify-center bg-[#e7e7e7]">
-
-      {/* CARD */}
       <div className="bg-[#f3f3f3] w-155 p-10 rounded-md">
-
-        {/* TITLE */}
         <h2 className="text-3xl font-semibold text-center mb-8">Login</h2>
 
         <form onSubmit={handleSubmit} className="space-y-5">
 
-          {/* EMAIL */}
+          {errors.general && (
+            <p className="text-red-500 text-sm text-center">
+              {errors.general}
+            </p>
+          )}
+
           <div>
             <label className="block text-sm mb-2">Email address</label>
             <input
               type="text"
               name="email"
-              placeholder="Email address"
               value={form.email}
               onChange={handleChange}
-              className="w-full p-3 border bg-white border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400"
+              className="w-full p-3 border bg-white rounded-md"
             />
             {errors.email && (
-              <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+              <p className="text-red-500 text-xs">{errors.email}</p>
             )}
           </div>
 
-          {/* PASSWORD */}
           <div>
             <label className="block text-sm mb-2">Password</label>
             <input
               type="password"
               name="password"
-              placeholder="Password"
               value={form.password}
               onChange={handleChange}
-              className="w-full p-3 border bg-white border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400"
+              className="w-full p-3 border bg-white rounded-md"
             />
             {errors.password && (
-              <p className="text-red-500 text-xs mt-1">{errors.password}</p>
+              <p className="text-red-500 text-xs">{errors.password}</p>
             )}
           </div>
 
-          {/* BUTTON */}
           <div className="flex justify-center pt-2">
-            <button
-              type="submit"
-              className="bg-green-800 text-white px-8 py-2 rounded-full hover:bg-green-900 transition"
-            >
+            <button className="bg-green-800 text-white px-8 py-2 rounded-full">
               SIGN IN
             </button>
           </div>
 
-          {/* FORGOT PASSWORD */}
-          <p className="text-center text-sm text-gray-500 mt-2">
+          <p className="text-center text-sm text-gray-500">
             <Link to="/forgot-password" className="underline">
               Forgot password?
             </Link>
           </p>
 
-          {/* CREATE ACCOUNT */}
           <div className="text-center mt-4">
-            <p className="text-md font-medium">
-              Don't have an account?
-            </p>
-            <Link
-              to="/register"
-              className="text-(--primary-color) text-sm underline"
-            >
-              Create account?
+            <p>Don't have an account?</p>
+            <Link to="/register" className="underline">
+              Create account
             </Link>
           </div>
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [form, setForm] = useState({
@@ -10,6 +10,7 @@ const Register = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const navigate = useNavigate();
 
   // ✅ HANDLE INPUT
   const handleChange = (e) => {
@@ -55,8 +56,21 @@ const Register = () => {
       setErrors(validationErrors);
     } else {
       setErrors({});
-      console.log("Register Data:", form);
-      // 👉 API CALL HERE
+      
+      // ✅ LOCAL STORAGE REGISTRATION
+      const existingUsers = JSON.parse(localStorage.getItem('registeredUsers')) || [];
+      const userExists = existingUsers.find(u => u.email === form.email);
+      
+      if (userExists) {
+        setErrors({ email: "Email is already registered" });
+        return;
+      }
+
+      existingUsers.push(form);
+      localStorage.setItem('registeredUsers', JSON.stringify(existingUsers));
+
+      alert("Registration successful! Please login.");
+      navigate("/login");
     }
   };
 

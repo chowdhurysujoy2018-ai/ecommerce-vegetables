@@ -3,6 +3,8 @@ import Button from '../global-components/Button'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
 import { useCart } from '../context/CartContext';
+import { useAuth } from '../context/AuthContext';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const ProductCard = ({
   productId,
@@ -17,10 +19,13 @@ const ProductCard = ({
 }) => {
 
   const { addToCart } = useCart();
+  const { user } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   // ✅ SAFE PRODUCT OBJECT (FIXED)
   const product = {
-    id: productId ?? productName,   // 🔥 fallback fix
+    id: productId ?? productName,
     name: productName,
     image: productIamge,
     price: productPrice,
@@ -29,8 +34,8 @@ const ProductCard = ({
   return (
     <div className="border border-[#f5f5f5] rounded-lg bg-[#f5f5f5] overflow-hidden shadow hover:shadow-lg transition">
 
-      <img 
-        src={productIamge} 
+      <img
+        src={productIamge}
         alt={productAltName}
         className="w-full h-80 object-cover"
       />
@@ -54,22 +59,27 @@ const ProductCard = ({
 
         {/* RIGHT */}
         <div className="flex justify-between flex-col flex-1 items-end">
-          <span className="text-[20px] font-bold text-[var(--primary-color)]">
+          <span className="text-[20px] font-bold text-(--primary-color)">
             ${productPrice}
           </span>
 
-          <span className={`text-sm ${productStockClr ? 'text-[var(--primary-color)]' : 'text-red-600'}`}>
+          <span className={`text-sm ${productStockClr ? 'text-(--primary-color)' : 'text-red-600'}`}>
             {isproductStock}
           </span>
         </div>
 
         {/* BUTTON */}
-        <Button 
-          btnText={btnText || "Add to Cart"} 
+        <Button
+          btnText={btnText || "Add to Cart"}
           btnIcon={faShoppingBasket}
-          btnClr="bg-[var(--primary-color)] text-white !mt-3 w-full"
-          
+          btnClr="bg-[var(--primary-color)] text-white !mt-3"
+
           onClick={() => {
+            if (!user || Object.keys(user).length === 0) {
+              alert("Please login first to add items to your cart.");
+              navigate('/login', { state: { from: location.pathname } });
+              return;
+            }
             console.log("ADDING:", product); // ✅ DEBUG
             addToCart(product);
           }}

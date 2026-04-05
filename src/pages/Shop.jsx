@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import useProducts from "../hooks/useProducts";
-import ProductCard from '../components/productCard';
+import ProductCard from '../components/ProductCard';
 
 const Shop = () => {
 

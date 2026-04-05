@@ -25,6 +25,9 @@ import Register from '../auth/Register'
 import ForgotPassword from '../auth/ForgotPassword'
 import ResetPassword from '../auth/ResetPassword'
 
+// 🔥 NEW IMPORT
+import ProtectedRoute from '../components/ProtectedRoute'
+
 // 404 page
 import PageNotFound from '../pages/PageNotFound'
 
@@ -35,7 +38,6 @@ const AppRoutes = () => {
       <Route path="/shop" element={<Shop />} />
       <Route path="/product-lists" element={<ProductListing />} />
       <Route path="/blog" element={<Blog />} />
-      {/* <Route path="/blog-details" element={<BlogDetails />} /> */}
       <Route path="/blog/:id" element={<BlogDetails />} />
 
       {/* pages */}
@@ -47,11 +49,18 @@ const AppRoutes = () => {
       <Route path="/payment-policy" element={<PaymentPolicy />} />
       <Route path="/terms-conditions" element={<TermConditions />} />
 
-      {/* product pages */}
-      <Route path="/cart" element={<Cart />} />
+      {/* 🔒 PROTECTED CART */}
+      <Route 
+        path="/cart" 
+        element={
+          <ProtectedRoute>
+            <Cart />
+          </ProtectedRoute>
+        } 
+      />
+
       <Route path="/wishlist" element={<Wishlist />} />
       <Route path="/checkout" element={<Checkout />} />
-
 
       {/* auth pages */}
       <Route path="/login" element={<Login />} />
@@ -60,8 +69,7 @@ const AppRoutes = () => {
       <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route path="/reset-password" element={<ResetPassword />} />
 
-
-      {/* 404 not found */}
+      {/* 404 */}
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   )

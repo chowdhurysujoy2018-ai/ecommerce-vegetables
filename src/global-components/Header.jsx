@@ -8,10 +8,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faUser, faHeart, faBagShopping, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 import { useCart } from '../context/CartContext';
+import { useAuth } from '../context/AuthContext';
 
 const Header = () => {
 
   const { cartItems } = useCart();
+  const { user } = useAuth();
   const totalItems = cartItems.reduce((total, item) => total + item.qty, 0);
 
   return (
@@ -46,17 +48,23 @@ const Header = () => {
           </ul>
         </nav>
         <Link to="/" className='flex-1 flex justify-center'>
-          <img src={logo} alt="Logo" className='max-h-20'/>
+          <img src={logo} alt="Logo" className='max-h-20' />
         </Link>
-        <div className="flex items-center gap-4 max-w-137.5 w-full">
+        <div className="flex items-center justify-end gap-4 max-w-137.5 w-full">
           <div className='flex items-center gap-2 border border-gray-200 rounded-full px-5 py-3'>
-            <input type="search" placeholder="Search Product..." className='focus:outline-none'/>
+            <input type="search" placeholder="Search Product..." className='focus:outline-none' />
             <button><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
           </div>
           <div className='flex gap-x-7'>
-            <Link to="/login">
-              <span className='border border-gray-200 rounded-full h-9 inline-flex items-center justify-center w-9 mr-2.5'><FontAwesomeIcon icon={faUser} /></span>Login
-            </Link>
+            {user && Object.keys(user).length > 0 ? (
+              <Link to="/logout" className='flex items-center hover:text-(--primary-color)'>
+                <span className='border border-gray-200 rounded-full h-9 inline-flex items-center justify-center w-9 mr-2.5'><FontAwesomeIcon icon={faUser} /></span>Logout
+              </Link>
+            ) : (
+              <Link to="/login" className='flex items-center hover:text-(--primary-color)'>
+                <span className='border border-gray-200 rounded-full h-9 inline-flex items-center justify-center w-9 mr-2.5'><FontAwesomeIcon icon={faUser} /></span>Login
+              </Link>
+            )}
             {/* <Link to="/cart" className='flex items-center'>
               <span className='border border-gray-200 rounded-full h-9 inline-flex items-center justify-center w-9'><FontAwesomeIcon icon={faHeart} /></span><span className='inline-flex item-center justify-center h-6 w-6 bg-(--primary-color) rounded-full -ml-1 text-white'>0</span>
             </Link> */}
@@ -71,10 +79,6 @@ const Header = () => {
                   {totalItems}
                 </span>
               )}
-            </Link>
-
-            <Link to="/cart" className='flex items-center'>
-              <span className='border border-gray-200 rounded-full h-9 inline-flex items-center justify-center w-9'><FontAwesomeIcon icon={faBagShopping} /></span><span className='inline-flex item-center justify-center h-6 w-6 bg-(--primary-color) rounded-full -ml-1 text-white'>0</span>
             </Link>
 
           </div>

@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const CartContext = createContext();
 
@@ -6,9 +7,27 @@ export const useCart = () => useContext(CartContext);
 
 const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
+  const navigate = useNavigate();
 
   // ✅ ADD TO CART
   const addToCart = (product) => {
+    // 🔥 ZERO-BYPASS AUTH CHECK
+    const loggedInUserStr = localStorage.getItem('user');
+    let isAuthed = false;
+    
+    if (loggedInUserStr) {
+      try {
+        const u = JSON.parse(loggedInUserStr);
+        if (u && Object.keys(u).length > 0) isAuthed = true;
+      } catch (e) {}
+    }
+
+    if (!isAuthed) {
+      alert("Please login first to add items to your cart.");
+      navigate('/login');
+      return;
+    }
+
     setCartItems((prev) => {
       const exist = prev.find((item) => item.id === product.id);
 
