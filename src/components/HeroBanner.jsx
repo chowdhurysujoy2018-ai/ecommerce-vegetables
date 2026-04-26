@@ -38,7 +38,7 @@ const HeroBanner = () => {
       >
         {banners.map((item) => (
           <SwiperSlide key={item.id}>
-            <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between px-6 gap-10">
+            <div className="container flex flex-col lg:flex-row items-center justify-between px-6 gap-10">
               
               {/* TEXT */}
               <div className="max-w-xl animate-slideUp">
